@@ -1,12 +1,12 @@
-import Layaut from "./Layaut";
+
 
 
 function Home() {
     return (
       <div className="">
       
-          <Layaut></Layaut>
-        
+    
+        <h1>Estoy en Inicio</h1>
         
           
       </div>
