@@ -4,9 +4,10 @@
 function Home() {
     return (
       <div className="">
+        <h1>En Inicio</h1>
       
     
-        <h1>Estoy en Inicio</h1>
+        
         
           
       </div>
