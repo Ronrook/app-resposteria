@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import Navbar from "./Navbar";
+// import Footer from "./Footer";
 
 
 
