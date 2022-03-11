@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-
-
+import { FaShoppingBasket } from "react-icons/fa";
 
 
 function HamburgerMenu() {

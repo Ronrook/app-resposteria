@@ -1,14 +1,25 @@
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { FaShoppingBasket } from "react-icons/fa";
+
 
 function Navbar({ toggleOpen }) {
     return (
-            <nav className="flex flex-col items-center h-20 bg-white text-black relative shadow-sm md:md:flex-row justify-between">
+            <nav className="flex  items-center h-20 bg-white text-black relative shadow-sm md:md:flex-row justify-between">
                 <img src={logo} alt="logo" className="w-20 md:w-12 pl-4" />
 
-                <div className=" px-4 cursor-pointer md:hidden " onClick={toggleOpen}>
-                    <FaBars></FaBars>
+                <div className=" flex px-4 cursor-pointer md:hidden " onClick={toggleOpen}>
+                    <div className=" text-gray-500 text-3xl flex items-center">
+                        <FaBars/>
+                    </div>
+                    
+                    <Link to="/carrito" className="p-3">
+                        <div className=" text-gray-500 text-4xl ">
+                            <FaShoppingBasket/>
+                        </div>
+                    </Link>
+                    
                 </div>
 
                 <div className="pr-8 hidden md:flex flex-row ">
@@ -22,7 +33,9 @@ function Navbar({ toggleOpen }) {
                         Pedido
                     </Link>
                     <Link to="/carrito" className="p-3">
-                        Carrito
+                        <div className=" text-gray-500 text-4xl">
+                            <FaShoppingBasket/>
+                        </div>
                     </Link>
                 </div>
             </nav>
