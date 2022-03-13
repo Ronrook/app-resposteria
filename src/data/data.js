@@ -1,7 +1,8 @@
 
-import torta1 from "../assets/torta.jpg";
+import torta1 from "../assets/torta1.jpg";
 import torta2 from "../assets/torta2.jpg";
 import torta3 from "../assets/torta3.jpg";
+import torta4 from "../assets/torta4.jpg";
 
 export const producto1 = {
     id: 1,
@@ -32,11 +33,12 @@ export const producto3 = {
 
 export const producto4 = {
     id: 4,
-    nombre: 'Fantasia',
-    img: torta3,
+    nombre: 'Grado',
+    img: torta4,
     precio: 60000,
 
 }
+
 
 
 

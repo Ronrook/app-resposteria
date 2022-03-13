@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import data from '../data/data';
 
 
-function Products({addCart}) {
+function Products({addItemCart}) {
     
     return (
       <div className=" container  mx-auto bg-pink-100">
@@ -13,7 +13,7 @@ function Products({addCart}) {
                         <Card
                             key={producto.id}
                             producto={producto} 
-                            addCart={addCart}/>
+                            addItemCart={addItemCart}/>
                     ))
                 }
           
