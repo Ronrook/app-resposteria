@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingBasket } from "react-icons/fa";
 import { IoSadOutline } from "react-icons/io5";
 import Form from "../components/Form";
 import ItemCart from "../components/ItemCart";
+import CardTotalBuy from "../components/CardTotalBuy";
 
 
 
 function ShoppingCart({cart, deleteItemCart}) {
+
+    const [total, setTotal]= useState (0);
+
+    useEffect (()=>{
+        const totalBuy = cart.reduce((total, product)=> total + (product.cant * 
+            product.price), 0)
+        
+            setTotal( totalBuy)
+        
+    },[cart])
+
+
 
     const totalItems = cart.length
     
@@ -17,7 +30,7 @@ function ShoppingCart({cart, deleteItemCart}) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {cart && cart.length? (
                 <>
-                    <section className="mb-52 bg-white rounded-lg shadow-lg p-6 tex-gray-700"> 
+                    <section className="mb-30 bg-white rounded-lg  p-6 tex-gray-700"> 
 
                         <div class="flex justify-between border-b pb-8">
                             <h1 class="font-semibold text-2xl">Carrito de compras</h1>
@@ -43,9 +56,14 @@ function ShoppingCart({cart, deleteItemCart}) {
                                 />
                             ))
                         }
+                        
                     </section>
 
+                    <CardTotalBuy 
+                        total={total}
+                    />
 
+                    
                     <div className="mt-8">
                         <div className="">
                             

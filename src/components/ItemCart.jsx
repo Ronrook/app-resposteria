@@ -29,16 +29,17 @@ function ItemCart({product, deleteItemCart}) {
 
     const handleAdd = () => {
         setCounter(counter+1)
-        if (counter === 2){
+        if (counter !== 2){
             setTotal((counter * total))
         }
         
-        
-
+    
     }
 
+    
+
     return (
-        <div className="container m-1 md:m-2 py-2">
+        <div className="m-1 md:m-2 py-2">
             <section className="bg-white ruended-lg shadow-lg p-6 text-gray-700">
                 <div className="flex justify-between">
                     <div className='flex items-center'>
