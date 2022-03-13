@@ -6,23 +6,19 @@ import data from '../data/data';
 function Products({addItemCart}) {
     
     return (
-      <div className=" container  mx-auto bg-pink-100">
-            <div className="grid grid-cols-1  content-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="bg-pink-600 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mt-28 p-44 md:p-24  grid grid-cols-1   gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    data.map(producto => (
+                    data.map(product => (
                         <Card
-                            key={producto.id}
-                            producto={producto} 
+                            key={product.id}
+                            product={product} 
                             addItemCart={addItemCart}/>
                     ))
                 }
           
           
-          
-          
           </div>
-        
-        
           
       </div>
     );

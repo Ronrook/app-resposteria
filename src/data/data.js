@@ -6,26 +6,26 @@ import torta4 from "../assets/torta4.jpg";
 
 export const producto1 = {
     id: 1,
-    nombre: 'Flores',
+    name: 'Flores',
     img: torta1,
-    precio: 60000,
+    price: 60000,
 }
 
 
 export const producto2 = {
     id: 2,
-    nombre: 'Unicornio',
+    name: 'Unicornio',
     img: torta2,
-    precio: 60000,
+    price: 50000,
 
 }
 
 
 export const producto3 = {
     id: 3,
-    nombre: 'Fantasia',
+    name: 'Fantasia',
     img: torta3,
-    precio: 60000,
+    price: 60000,
 
 }
 
@@ -33,9 +33,9 @@ export const producto3 = {
 
 export const producto4 = {
     id: 4,
-    nombre: 'Grado',
+    name: 'Grado',
     img: torta4,
-    precio: 60000,
+    price: 60000,
 
 }
 

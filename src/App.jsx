@@ -8,8 +8,7 @@ import { useEffect, useState } from "react";
 
 function App() {
     const [cart, setCart]= useState ([]);
-    const [total, setTotal]= useState (0);
-    const [counter, setCounter]= useState (1);
+    
 
     const addItemCart = product => {
         const response = cart.find(item => item.id === product.id)
@@ -28,20 +27,13 @@ function App() {
         setCart(updatteCart)
         
     }
-    const updateTotal = () =>{
-        
-        setTotal(total * counter )
-        
-    }
 
-
-    
     useEffect (()=>{
         console.log('useEFFECT')
     },[cart])
 
 
-    console.log(counter)
+    
 
 
     return (
@@ -58,9 +50,6 @@ function App() {
                     <Route path="/carrito" element={
                         <ShoppingCart 
                             cart={cart}
-                            total={total}
-                            counter={counter}
-                            setCounter={setCounter}
                             deleteItemCart={deleteItemCart} 
                         />
                     }/>
